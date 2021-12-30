@@ -51,11 +51,11 @@ struct RecipeFeaturedView: View {
                                     }
                                 }
                             })
-                            .sheet(isPresented: $isDetailViewShowing) {
+                                .sheet(isPresented: $isDetailViewShowing) {
                                 // Show the Recipe Detail View
                                 RecipeDetailView(recipe: model.recipes[index])
                             }
-                            .buttonStyle(PlainButtonStyle)
+                            .buttonStyle(PlainButtonStyle())
                             .frame(width: geo.size.width - 40, height: geo.size.height - 100, alignment: .center)
                             .cornerRadius(15)
                             .shadow(color: Color(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.5), radius: 10, x: -5, y: 5)
@@ -79,6 +79,7 @@ struct RecipeFeaturedView: View {
                 
             }
             .padding([.leading, .bottom])
+        }
     }
 }
 
